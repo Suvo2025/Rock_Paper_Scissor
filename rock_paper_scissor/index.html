@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rock_Paper_Scissor</title>
+<link rel="stylesheet" href="style.css">
+  <style>
+    spline-viewer {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100vw;
+      height: 100vh;
+      z-index: -1; /* Push behind all other elements */
+    }
+
+    main {
+      position: relative; /* Bring above 3D background */
+      z-index: 1;
+    }
+  </style>
+<script type="module" src="https://unpkg.com/@splinetool/viewer@1.10.23/build/spline-viewer.js"></script>
+<link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+
+
+</head>
+<body>
+<spline-viewer url="https://prod.spline.design/9f1WINZfGJ-LaNim/scene.splinecode"></spline-viewer>
+<h1 class="title">ROCK PAPER SCISSOR</h1>
+<div class="choices">
+    <div class="choice" id="rock">
+        <img src="rock.png">
+    </div>
+        <div class="choice" id="paper">
+        <img src="paper.png">
+    </div>
+        <div class="choice" id="scissor">
+        <img src="scissors.png">
+    </div>
+</div>
+<div class="score-board">
+    <div class="score">
+        <p id="user-score">0</p>
+        <p>You</p>
+    </div>
+        <div class="score">
+        <p id="comp-score">0</p>
+        <p>Computer</p>
+    </div>
+</div>
+
+<div class="msg-container">
+    <p id="msg">Play your move</p>
+</div>
+<div class="reset-container">
+    <button id="reset-btn">Reset Game</button>
+</div>
+<script src="script.js"></script>  
+</body>
+</html>
